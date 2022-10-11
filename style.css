@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700');
+*{
+  margin:0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+section[id]{
+  scroll-margin-top: 80px;
+}
+
+body{
+  font-family: "Open Sans", Helvetica, sans-serif;
+  padding:90px 20px 0;
+  background-color:#97cbdc;
+}
+
+.header{
+  background-color:#001b48 ;
+  height: 80px;
+  position:fixed;
+  width: 100%;
+  top:0;
+  left:0;
+  z-index: 100;
+}
+
+.nav{
+  display:flex;
+  justify-content: space-between;
+  max-width: 992px;
+  margin:0 auto;
+}
+
+.nav-link{
+  color: white;
+  text-decoration: none;
+}
+
+.logo{
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 80px;
+}
+
+.nav-menu{
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nav-menu-item{
+  font-size: 10px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.nav-menu-link{
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+.nav-menu-link:hover{
+  background-color:#018abd;
+  -webkit-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.nav-toggle,
+.nav-toggle-c{
+  display: none;
+}
+
+.about{
+  text-align: center;
+  background-size: cover;
+  background-image: url(fondo.gif);
+
+  background-position: center;
+  border-radius: 15px; 
+}
+
+.title-about{
+  font-size:35px;
+  font-weight: bold;
+  margin: 0;
+  color:black;
+}
+.image-about{
+  position: relative;
+}
+
+.about-info{
+margin-bottom: 25px;
+}
+
+.about-detalle{
+  font-size:18px;
+  font-weight: 500;
+  line-height: 1.2;
+  max-width: 450px;
+  margin: 10px auto;
+  color:black;
+
+}
+
+.about-img{
+  width: 50%;
+  max-width: 350px;
+  max-height: 350px;
+  filter:drop-shadow(-1px 3px 10px black);
+}
+
+.cv{
+  text-align: center;
+  background:#004581;
+  border-radius: 15px;
+}
+
+.slider{
+  width: 95%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slider ul{
+  display: flex;
+  padding: 0;
+  width: 400%;
+  animation: cambio 20s infinite;
+  animation-direction: alternate;
+}
+
+.slider li{
+  width: 100%;
+  list-style: none;
+}
+
+.slider img{
+  width: 100%;
+  height: 100%;
+}
+
+.contenedor-contact{
+  margin-bottom: 25px;
+  }
+
+.contact{
+  text-align: center;
+  background-image: url(img5.JPG);
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+.title-contact{
+  font-size:35px;
+  font-weight: bold;
+  padding-top: 150px;  
+  color:black;
+}
+.contact-detalle{
+  font-size:25px;
+  font-weight: 500;
+  line-height: 1.2;
+  height: 300px;
+  max-width: 450px;
+  margin: 10px auto;
+  color:black;
+
+}
+
+@keyframes cambio{
+  0% { margin-left: 0;}
+  20% {margin-left: 0;}
+  25% {margin-left: -100%;}
+  45% {margin-left: -100%;}
+  50% {margin-left: -200%;}
+  70% {margin-left: -200%;}
+  75% {margin-left: -300%;}
+  100% {margin-left: -300%;}
+}
+
+@media (min-width:968px){
+  .about{
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    height: 550px;
+    margin: 0 auto;
+  }
+  
+  .title-about{
+    font-size:40px;
+    margin-top: 80px;
+  }
+  
+  .about-info{
+  margin-bottom: 0px;
+  margin-left: 100px;
+  }
+  
+  .about-detalle{
+    font-size:18px;
+    font-weight: 500px;
+    line-height: 1.2;
+    max-width: 450px;
+    margin: 20px auto;
+    color:black;
+  
+  }
+  .image-about{
+    margin-right: 100px;
+    margin-top: 120px;
+  }
+  .about-img{
+    width: 100%;
+    max-width: 350px;
+    max-height: 350px;
+    transition: all 300ms;
+  }
+  
+  .about-img:hover{
+    transform: scale(1.15);
+  }
+}
+
+@media (max-width: 768px){
+  .nav-menu{
+    flex-direction: column;
+    position:fixed;
+    width: 100%;
+    top:80px;
+    left:0;
+    align-items: center;
+    padding: 20px 0;
+    background-color:#003851;
+    height: calc(100% - 80px);
+    overflow-y: auto;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 100;
+
+  }
+  .nav-toggle{
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .nav-toggle-c{
+    align-self:flex-end;
+    padding: 20px 10px;
+  }
+  .nav-menu-link:hover{
+    background: none;
+    color:#018abd;
+  }
+
+  .abrir-menu{
+    opacity: 1;
+    pointer-events: all;
+  }
+  .contact-detalle{
+    font-size:18px;
+    font-weight: 500;
+    line-height: 1.2;
+    height: 300px;
+    max-width: 450px;
+    margin: 10px auto;
+    color:black;
+  
+  }
+}
